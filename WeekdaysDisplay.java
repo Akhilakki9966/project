@@ -1,10 +1,10 @@
-public class Weekdays {
-    public static void main(String[] args) {
-        String[] weekdays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+import java.text.DateFormatSymbols;
 
-        System.out.println("The weekdays are:");
-        for (String day : weekdays) {
-            System.out.println(day);
+public class WeekdaysDisplay {
+    public static void main(String[] args) {
+        String[] weekdays = new DateFormatSymbols().getWeekdays();
+        for (int i = 2; i < weekdays.length; i++) { // Skipping empty entries
+            System.out.println(weekdays[i]);
         }
     }
 }
