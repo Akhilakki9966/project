@@ -8,12 +8,12 @@ pipeline {
         }
         stage ('compile') {
             steps {
-                sh 'javac Weekdays.java'
+                sh 'javac Months.java'
             }
         }
                 stage ('run') {
                     steps {
-                        sh 'java Weekdays'
+                        sh 'java Months'
                     }
                 }
     }
