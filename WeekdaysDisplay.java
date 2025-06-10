@@ -1,10 +1,20 @@
-import java.text.DateFormatSymbols;
+import java.util.Calendar;
 
-public class WeekdaysDisplay {
+public class WeekDaysDisplay {
+    
     public static void main(String[] args) {
-        String[] weekdays = new DateFormatSymbols().getWeekdays();
-        for (int i = 2; i < weekdays.length; i++) { // Skipping empty entries
-            System.out.println(weekdays[i]);
+        // Get the instance of Calendar
+        Calendar calendar = Calendar.getInstance();
+        
+        // Array of days of the week
+        String[] weekDays = {
+            "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        };
+        
+        // Display each day of the week
+        System.out.println("The days of the week are:");
+        for (String day : weekDays) {
+            System.out.println(day);
         }
     }
 }
